@@ -5,6 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vladimir Drizheruk — Experienced Senior DevOps Engineer</title>
   <meta name="description" content="Experienced Senior DevOps Engineer specializing in Kubernetes, CI/CD, infrastructure automation, high-load systems, observability and cloud platforms." />
+  <link rel="canonical" href="https://vladimir.drizheruk.name/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vladimir.drizheruk.name/" />
+  <meta property="og:title" content="Vladimir Drizheruk — Senior DevOps Engineer" />
+  <meta property="og:description" content="Experienced Senior DevOps Engineer specializing in Kubernetes, CI/CD, infrastructure automation, high-load systems, observability and cloud platforms." />
+  <meta property="og:image" content="https://vladimir.drizheruk.name/vladimir-drizheruk-executive-portrait.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vladimir Drizheruk — Senior DevOps Engineer" />
+  <meta name="twitter:description" content="Experienced Senior DevOps Engineer specializing in Kubernetes, CI/CD, infrastructure automation, high-load systems, observability and cloud platforms." />
+  <meta name="twitter:image" content="https://vladimir.drizheruk.name/vladimir-drizheruk-executive-portrait.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vladimir Drizheruk",
+    "jobTitle": "Senior DevOps Engineer",
+    "url": "https://vladimir.drizheruk.name/",
+    "image": "https://vladimir.drizheruk.name/vladimir-drizheruk-executive-portrait.png",
+    "email": "vladimir@drizheruk.com.ua",
+    "telephone": "+380684206797",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kharkiv",
+      "addressCountry": "UA"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/vladimirdrizheruk/"
+    ],
+    "knowsAbout": [
+      "Kubernetes", "Amazon EKS", "Docker", "Terraform", "Pulumi",
+      "GitLab CI", "Prometheus", "Grafana", "AWS", "GCP",
+      "SaltStack", "Ansible", "Puppet", "ELK", "Splunk"
+    ],
+    "description": "Experienced Senior DevOps Engineer specializing in Kubernetes, CI/CD, infrastructure automation, high-load systems, observability and cloud platforms."
+  }
+  </script>
   <style>
     :root {
       --bg: #0b0f17;
@@ -265,6 +301,8 @@
     }
     .contact-item span { color: var(--muted); }
     .contact-item strong { text-align: right; }
+    .contact h2 { margin-top: 18px; }
+    .contact .lead { margin-bottom: 0; }
 
     footer {
       color: var(--muted);
@@ -273,8 +311,40 @@
       font-size: 14px;
     }
 
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--white-line);
+      color: var(--text);
+      border-radius: 10px;
+      padding: 8px 10px;
+      cursor: pointer;
+      line-height: 0;
+    }
+
     @media (max-width: 900px) {
-      .navlinks { display: none; }
+      .menu-toggle { display: block; }
+      .navlinks {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: rgba(8, 11, 17, .96);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid var(--white-line);
+        padding: 8px 20px 16px;
+        gap: 0;
+        z-index: 9;
+      }
+      .navlinks.open { display: flex; }
+      .navlinks a {
+        padding: 13px 0;
+        border-bottom: 1px solid var(--white-line);
+        font-size: 15px;
+      }
+      .navlinks a:last-child { border-bottom: none; }
       .hero, .contact { grid-template-columns: 1fr; }
       .trust, .grid-3, .grid-2 { grid-template-columns: 1fr; }
       .role { grid-template-columns: 1fr; }
@@ -290,12 +360,19 @@
         <strong>Vladimir Drizheruk</strong>
         <span>Experienced Senior DevOps Engineer</span>
       </a>
-      <nav class="navlinks" aria-label="Primary navigation">
+      <nav id="primary-nav" class="navlinks" aria-label="Primary navigation">
         <a href="#expertise">Expertise</a>
         <a href="#impact">Impact</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
+        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
+          <rect width="20" height="2" rx="1" fill="currentColor"/>
+          <rect y="6" width="20" height="2" rx="1" fill="currentColor"/>
+          <rect y="12" width="20" height="2" rx="1" fill="currentColor"/>
+        </svg>
+      </button>
       <a class="btn" href="mailto:vladimir@drizheruk.com.ua?subject=Senior%20DevOps%20Engineer%20Opportunity">Hire me</a>
     </div>
   </header>
@@ -323,13 +400,13 @@
         </div>
       </div>
 
-      <aside class="portrait-card" aria-label="Portrait of Vladimir Drizheruk">
+      <figure class="portrait-card">
         <img src="vladimir-drizheruk-executive-portrait.png" alt="Vladimir Drizheruk, Senior DevOps Engineer" />
-        <div class="availability">
+        <figcaption class="availability">
           <strong>Available for remote senior DevOps roles</strong>
           <span>Full-time employment, consulting, and contract engagement.</span>
-        </div>
-      </aside>
+        </figcaption>
+      </figure>
     </div>
 
     <section id="expertise">
@@ -402,7 +479,6 @@
             <h3>Infrastructure scale</h3>
             <ul>
               <li>Experience across Linux, containers, message queues, databases and observability stacks.</li>
-              <li>Ready to quantify clusters, services and platform size once exact numbers are confirmed.</li>
             </ul>
           </article>
         </div>
@@ -418,7 +494,7 @@
 
         <div class="timeline">
           <article class="role">
-            <time>2025 — Present</time>
+            <time datetime="2025">2025 — Present</time>
             <div>
               <h3>Senior DevOps Engineer — Hydrolix</h3>
               <p>Senior DevOps role focused on modern infrastructure, automation, reliability and production-grade platform operations.</p>
@@ -426,7 +502,7 @@
           </article>
 
           <article class="role">
-            <time>2022 — 2025</time>
+            <time datetime="2022">2022 — 2025</time>
             <div>
               <h3>Senior DevOps Engineer — Edgio / Limelight Networks</h3>
               <p>Designed and implemented product deployment automation for highly loaded systems. Supported Dev/QA teams with GitLab CI, rollout planning, canary testing, KPIs, monitoring and release operations.</p>
@@ -434,7 +510,7 @@
           </article>
 
           <article class="role">
-            <time>2014 — 2022</time>
+            <time datetime="2014">2014 — 2022</time>
             <div>
               <h3>Senior DevOps / Senior PHP Symfony Engineer — OroCommerce</h3>
               <p>Progressed from PHP engineering to senior DevOps responsibilities, combining application architecture, infrastructure, server optimization and platform support.</p>
@@ -442,7 +518,7 @@
           </article>
 
           <article class="role">
-            <time>2005 — 2014</time>
+            <time datetime="2005">2005 — 2014</time>
             <div>
               <h3>Engineering foundation — Team Lead, Architect, PHP Engineer</h3>
               <p>Built strong software engineering and Linux administration foundation across web platforms, high-load optimization, databases and team leadership.</p>
@@ -452,7 +528,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="technology">
       <div class="wrap">
         <div class="section-head">
           <h2>Technology profile</h2>
@@ -478,8 +554,8 @@
         <div class="contact">
           <div>
             <span class="eyebrow">Let’s build reliable infrastructure</span>
-            <h2 style="margin-top:18px">Hire Vladimir Drizheruk</h2>
-            <p class="lead" style="margin-bottom:0">
+            <h2>Hire Vladimir Drizheruk</h2>
+            <p class="lead">
               Open to remote Senior DevOps Engineer opportunities, full-time roles, consulting and contract engagements.
             </p>
           </div>
@@ -506,5 +582,19 @@
   <footer>
     <div class="wrap">© 2026 Vladimir Drizheruk. Senior DevOps Engineer — Kubernetes, Cloud, CI/CD, Observability, Automation.</div>
   </footer>
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('primary-nav');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+      toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open navigation menu');
+    }));
+  </script>
 </body>
 </html>
